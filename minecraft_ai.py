@@ -2,16 +2,16 @@ from pynput import mouse
 import keyboard
 import time
 import pyautogui
-import pyKey
+#import pyKey
 
 #reference to mouse
 mouse_obj = mouse.Controller()
 
 
 #jump
-def jump():
-    pyKey.pressKey(key="SPACEBAR")
-    pyKey.releaseKey(key="SPACEBAR")
+def jump(): #doesn't work :(
+    #pyKey.pressKey(key="SPACEBAR")
+    #pyKey.releaseKey(key="SPACEBAR")
 
 
 #move left
@@ -96,7 +96,7 @@ sprint_bw(4)
 
 time.sleep(1)
 
-jump()
+#jump()
 
 time.sleep(1)
 
