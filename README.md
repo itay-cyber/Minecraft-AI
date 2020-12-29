@@ -24,7 +24,7 @@ The movement class for the AI. Contains functions that are below:
 
 1. `ai.movement.move_forward(hold_time)`
 
-This function takes param "hold_time". This specifies the amount of time to hold the W key which is the forward moving key in Minecraft.
+This function takes param `hold_time`. This specifies the amount of time to hold the W key which is the forward moving key in Minecraft.
 
 2. `ai.movement.move_backward(hold_time)`
 
@@ -44,9 +44,22 @@ A function that works the same as `move_forward()` but sprints instead of moving
 
 Sprint backwards.
 
-7. `ai.movement.get_all_movement_functions()`
+7. The static method `AIMovement.get_all_movement_functions`
 
 Prints out all possible movement functions. 
 
 
+ai.misc_functions
+
+The miscellaneous functions class for the AI. Contains functions that are below:
+
+1. `ai.misc_functions.type_in_chat(msg)`
+
+A function to write a message into the Minecraft chat. Takes param `msg` which is the message to write.
+
+2. Coming soon.
+
+We are still working on the main functionality of the AI, so come back later to check out new features!
+
+# !WARNING! MINECRAFT MUST BE LAUNCHED AND YOU MUST BE IN MINECRAFT FOR THE AI TO WORK PROPERlY!!!
 
