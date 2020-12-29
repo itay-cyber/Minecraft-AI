@@ -63,3 +63,6 @@ We are still working on the main functionality of the AI, so come back later to 
 
 # !WARNING! MINECRAFT MUST BE LAUNCHED AND YOU MUST BE IN MINECRAFT FOR THE AI TO WORK PROPERlY!!!
 
+
+DOCS WRITTEN BY @itay-cyber
+
