@@ -1,72 +1,108 @@
-import keyboard as kb 
+import pyKey as pk
 import time
+
+
+"""
+
+Libs used: pyKey: https://github.com/andohuman/pyKey
+Psutil
+Time
+
+"""
 
 
 class AIMovement():
     def __init__(self):
         print("Movement class initialized")
 
-    #@ccm767 can u try to implement jump function i tried but couldn't find a way.
+    #jump
+    def jump(self):
+        pk.pressKey("SPACEBAR")
+        time.sleep(0.1)
+        pk.releaseKey("SPACEBAR")
+        
 
     #move left
     def move_left(self, hold_time):
-        kb.press("a")
+        pk.pressKey("A")
         time.sleep(hold_time)
-        kb.release("a")
+        pk.releaseKey("A")
 
     #move right
     def move_right(self, hold_time):
-        kb.press("d")
+        pk.pressKey("D")
         time.sleep(hold_time)
-        kb.release("d")
+        pk.releaseKey("D")
 
     #move forward
     def move_forward(self, hold_time):
-        kb.press("w")
+        pk.pressKey("W")
         time.sleep(hold_time)
-        kb.release("w")
+        pk.releaseKey("W")
+
 
     #move backward
     def move_backward(self, hold_time):
-        kb.press("s")
+        pk.pressKey("S")
         time.sleep(hold_time)
-        kb.release("s")
+        pk.releaseKey("S")
 
     #sprint forward
     def sprint_fw(self, hold_time):
-        kb.press("ctrl+w")
+        pk.pressKey("CTRL")
+        pk.pressKey("W")
         time.sleep(hold_time)
-        kb.release("ctrl+w")
+        pk.releaseKey("CTRL")
+        pk.releaseKey("W")
+
 
     #sprint backward
     def sprint_bw(self, hold_time):
-        kb.press("ctrl+s")
+        pk.pressKey("CTRL")
+        pk.pressKey("S")
         time.sleep(hold_time)
-        kb.release("ctrl+s")
+        pk.releaseKey("CTRL")
+        pk.releaseKey("S")
 
     #sprint right forward
     def sprint_rfw(self, hold_time):
-        kb.press("ctrl+w+d")
+        pk.pressKey("CTRL")
+        pk.pressKey("W")
+        pk.pressKey("D")
         time.sleep(hold_time)
-        kb.release("ctrl+w+d")
+        pk.releaseKey("CTRL")
+        pk.releaseKey("W")
+        pk.releaseKey("D")
 
     #sprint right backward
     def sprint_rbw(self, hold_time):
-        kb.press("ctrl+d+a")
+        pk.pressKey("CTRL")
+        pk.pressKey("D")
+        pk.pressKey("S")
         time.sleep(hold_time)
-        kb.release("ctrl+d+a")
+        pk.releaseKey("CTRL")
+        pk.releaseKey("D")
+        pk.releaseKey("S")
 
     #sprint left forward
     def sprint_lfw(self, hold_time):
-        kb.press("ctrl+w+a")
+        pk.pressKey("CTRL")
+        pk.pressKey("W")
+        pk.pressKey("A")
         time.sleep(hold_time)
-        kb.release("ctrl+w+a")
+        pk.releaseKey("CTRL")
+        pk.releaseKey("W")
+        pk.releaseKey("A")
 
     #sprint left backward
     def sprint_lbw(self, hold_time):
-        kb.press("ctrl+s+a")
+        pk.pressKey("CTRL")
+        pk.pressKey("S")
+        pk.pressKey("A")
         time.sleep(hold_time)
-        kb.release("ctrl+s+a")
+        pk.releaseKey("CTRL")
+        pk.releaseKey("S")
+        pk.releaseKey("A")
 
     @staticmethod
     #getting all movement functions. for people who want to make their AI do different things
