@@ -13,3 +13,40 @@ Steps:
 4. Run the command "python start.py"
 5. Follow the start process
 6. Now your bot is set up. Go into "start.py" and change up the code for the AI to move, jump, or soon-to-be mine.
+
+
+
+# Minecraft-AI Docs
+
+ai.movement
+
+The movement class for the AI. Contains functions that are below:
+
+1. `ai.movement.move_forward(hold_time)`
+
+This function takes param "hold_time". This specifies the amount of time to hold the W key which is the forward moving key in Minecraft.
+
+2. `ai.movement.move_backward(hold_time)`
+
+This function works the same as `move_forward()` but is the func to make the AI move backwards in game.
+
+3. `ai.movement.move_right(hold_time)`
+
+Pretty much understandable by now.. 
+
+4. `ai.movement.move_left(hold_time)`
+
+5. `ai.movement.sprint_fw(hold_time)`
+
+A function that works the same as `move_forward()` but sprints instead of moving (forward)
+
+6. `ai.movement.sprint_bw(hold_time)`
+
+Sprint backwards.
+
+7. `ai.movement.get_all_movement_functions()`
+
+Prints out all possible movement functions. 
+
+
+
