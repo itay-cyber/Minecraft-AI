@@ -9,10 +9,11 @@ Steps:
 
 1. Clone the repo (git clone or github desktop)
 2. Cd into the downloaded directory
-3. Launch Minecraft
-4. Run the command "python start.py"
-5. Follow the start process
-6. Now your bot is set up. Go into "start.py" and change up the code for the AI to move, jump, or soon-to-be mine.
+3. run the command `pip install -r requirements.txt`
+4. Launch Minecraft
+5. Run the command "python start.py"
+6. Follow the start process
+7. Now your bot is set up. Go into "start.py" and change up the code for the AI to move, jump, or soon-to-be mine.
 
 
 
