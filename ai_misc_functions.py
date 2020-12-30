@@ -1,20 +1,53 @@
 import time
-import keyboard as kb
-
+import pyKey as pk
+import mouse
 
 
 class AIMiscFunctionsInvoker():
+
+    tag = "[MISC]"
+
     def __init__(self):
         pass
 
     #type param msg in the minecraft chat
-    """def type_in_chat(self, msg):
-        kb.press("t")
+    def type_in_chat(self, msg):
+        pk.pressKey("T")
+        pk.releaseKey("T")
         time.sleep(0.1)
-        kb.release("t")
-        time.sleep()
-        kb.write(msg)
-        time.sleep(0.1)
-        kb.press_and_release("enter")"""
+        pk.sendSequence(seq=msg)
+        pk.pressKey("ENTER")
+        pk.releaseKey("ENTER")
+
+
+    
+    #switch to a certain hotbar slot
+    def switch_to_hotbar_slot(self, slot):
+        
+        possible_slots = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        
+        if (slot in possible_slots):
+            pk.pressKey(str(slot))
+            pk.releaseKey(str(slot))
+
+        else:
+            print("Cannot switch to slot \"{}\"!".format(str(slot)))
+    
+
+
+    def place_block(self):
+        mouse.click("right")
+
+        print("Placed block")
+
+
+
+
+    def get_block(self):
+        mouse.click("middle")
+
+        print("Got block. Function only works in creative mode.")
+        
 
         
