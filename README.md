@@ -19,29 +19,29 @@ Steps:
 
 # Minecraft-AI Docs
 
-ai.movement
+_ai.movement_
 
 The movement class for the AI. Contains functions that are below:
 
-1. `ai.movement.move_forward(hold_time)`
+1. `ai.movement.move_forward(block_amount)`
 
-This function takes param `hold_time`. This specifies the amount of time to hold the W key which is the forward moving key in Minecraft.
+This function takes param `block_amount`. This specifies the amount of blocks to walk. Function to move forward in game.
 
-2. `ai.movement.move_backward(hold_time)`
+2. `ai.movement.move_backward(block_amount)`
 
 This function works the same as `move_forward()` but is the func to make the AI move backwards in game.
 
-3. `ai.movement.move_right(hold_time)`
+3. `ai.movement.move_right(block_amount)`
 
-Pretty much understandable by now.. 
+Function to move right in game. 
 
-4. `ai.movement.move_left(hold_time)`
+4. `ai.movement.move_left(block_amount)`
 
-5. `ai.movement.sprint_fw(hold_time)`
+5. `ai.movement.sprint_fw(block_amount)`
 
 A function that works the same as `move_forward()` but sprints instead of moving (forward)
 
-6. `ai.movement.sprint_bw(hold_time)`
+6. `ai.movement.sprint_bw(block_amount)`
 
 Sprint backwards.
 
@@ -50,7 +50,7 @@ Sprint backwards.
 Prints out all possible movement functions. 
 
 
-ai.misc_functions
+_ai.misc_functions_
 
 The miscellaneous functions class for the AI. Contains functions that are below:
 
@@ -58,11 +58,23 @@ The miscellaneous functions class for the AI. Contains functions that are below:
 
 A function to write a message into the Minecraft chat. Takes param `msg` which is the message to write.
 
-2. Coming soon.
+2. `ai.misc_functions.get_block()`
+
+Function to middle-click the block being looked at and put it into hotbar
+
+3. `ai.misc_functions.switch_to_hotbar_slot(slot)`
+
+Function that switches to slot `slot` of your hotbar. Minimum number 1 largest number 9
+
+4. `ai.misc_functions.place_block()`
+
+Places a block at the block being looked at.
+
+5. Coming soon.
 
 We are still working on the main functionality of the AI, so come back later to check out new features!
 
-# !WARNING! MINECRAFT MUST BE LAUNCHED AND YOU MUST BE IN MINECRAFT FOR THE AI TO WORK PROPERlY!!!
+# ! WARNING ! MINECRAFT MUST BE LAUNCHED AND YOU MUST BE IN MINECRAFT FOR THE AI TO WORK PROPERlY
 
 
 DOCS WRITTEN BY @itay-cyber
