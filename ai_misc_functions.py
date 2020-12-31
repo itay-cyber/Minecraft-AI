@@ -1,7 +1,9 @@
 import time
 import pyKey as pk
 import mouse
+from pynput.keyboard import Controller, Key
 
+keyboard = Controller()
 
 class AIMiscFunctionsInvoker():
 
@@ -12,15 +14,33 @@ class AIMiscFunctionsInvoker():
 
     #type param msg in the minecraft chat
     def type_in_chat(self, msg):
-
-        msg.replace(" ", "")
-        
         pk.pressKey("T")
         pk.releaseKey("T")
-        time.sleep(0.1)
-        pk.sendSequence(msg)
+
+        msg = msg.lower()
+
+        msg = list(msg)
+
+        print(msg)
+        
+        time.sleep(1)
+
+        for char in range(len(msg)):
+            
+            print(msg[char])
+
+            msg[char] = msg[char].replace(" ", "SPACEBAR")
+            
+            
+
+            pk.pressKey(msg[char])
+            pk.releaseKey(msg[char])
+            time.sleep(0.1)
+
         pk.pressKey("ENTER")
         pk.releaseKey("ENTER")
+        
+        
 
 
     

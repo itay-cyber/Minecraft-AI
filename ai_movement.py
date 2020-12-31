@@ -1,5 +1,6 @@
 import pyKey as pk
 import time
+import sys
 
 
 """
@@ -20,6 +21,7 @@ Created by https://www.github.com/ccm7676
 
 class AIMovement():
 
+    ctrlKey = "LCTRL" if sys.platform == "linux" or sys.platform == "linux2" else "CTRL"
     tag = "[MOVEMENT]"
 
     def __init__(self):
@@ -73,10 +75,11 @@ class AIMovement():
 
     #sprint forward
     def sprint_fw(self, block_amount):
-        pk.pressKey("CTRL")
+
+        pk.pressKey(self.ctrlKey)
         pk.pressKey("W")
         time.sleep(block_amount / 4.317)
-        pk.releaseKey("CTRL")
+        pk.releaseKey(self.ctrlKey)
         pk.releaseKey("W")
 
         print("{} Sprinted forward {} blocks".format(self.tag, block_amount))
@@ -84,21 +87,21 @@ class AIMovement():
 
     #sprint backward
     def sprint_bw(self, block_amount):
-        pk.pressKey("CTRL")
+        pk.pressKey(self.ctrlKey)
         pk.pressKey("S")
         time.sleep(block_amount / 4.317)
-        pk.releaseKey("CTRL")
+        pk.releaseKey(self.ctrlKey)
         pk.releaseKey("S")
 
         print("{} Sprinted backward {} blocks".format(self.tag, block_amount))
 
     #sprint right forward
     def sprint_rfw(self, block_amount):
-        pk.pressKey("CTRL")
+        pk.pressKey(self.ctrlKey)
         pk.pressKey("W")
         pk.pressKey("D")
         time.sleep(block_amount / 4.317)
-        pk.releaseKey("CTRL")
+        pk.releaseKey(self.ctrlKey)
         pk.releaseKey("W")
         pk.releaseKey("D")
 
@@ -106,11 +109,11 @@ class AIMovement():
 
     #sprint right backward
     def sprint_rbw(self, block_amount):
-        pk.pressKey("CTRL")
+        pk.pressKey(self.ctrlKey)
         pk.pressKey("D")
         pk.pressKey("S")
         time.sleep(block_amount / 4.317)
-        pk.releaseKey("CTRL")
+        pk.releaseKey(self.ctrlKey)
         pk.releaseKey("D")
         pk.releaseKey("S")
 
@@ -118,11 +121,11 @@ class AIMovement():
 
     #sprint left forward
     def sprint_lfw(self,block_amount):
-        pk.pressKey("CTRL")
+        pk.pressKey(self.ctrlKey)
         pk.pressKey("W")
         pk.pressKey("A")
         time.sleep(block_amount / 4.317)
-        pk.releaseKey("CTRL")
+        pk.releaseKey(self.ctrlKey)
         pk.releaseKey("W")
         pk.releaseKey("A")
 
@@ -130,11 +133,11 @@ class AIMovement():
 
     #sprint left backward
     def sprint_lbw(self, block_amount):
-        pk.pressKey("CTRL")
+        pk.pressKey(self.ctrlKey)
         pk.pressKey("S")
         pk.pressKey("A")
         time.sleep(block_amount / 4.317)
-        pk.releaseKey("CTRL")
+        pk.releaseKey(self.ctrlKey)
         pk.releaseKey("S")
         pk.releaseKey("A")
 

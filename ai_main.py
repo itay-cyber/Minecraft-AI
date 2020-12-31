@@ -64,6 +64,31 @@ class MinecraftAI:
                 self.minecraft_running = True
                 exit(1)
 
+        elif (sys.platform == "linux" or sys.platform == "linux2"):
+            if (checkIfProcessRunning("java")):
+                print("{} Program detected that Minecraft's main java process is running".format(self.tag))
+                print("{} Continue with the program? 1/0: ".format(self.tag))
+
+                oneOrZero = int(input())
+
+                if (oneOrZero == 1):
+                    self.minecraft_running = True
+                    
+                    secs = int(input("{} Starting the program.. Please say how much secs of countdown you want: ".format(self.tag)))
+
+                    print("{} The program will start in {} seconds.".format(self.tag, str(secs)))
+                    time.sleep(secs)
+                    self.main()
+
+                elif (oneOrZero == 0):
+                    self.minecraft_running = False
+                    print("{} Terminating...".format(self.tag))
+                    exit(1)
+                else:
+                    print("{} Input not accepted. Please write 1 or 0.".format(self.tag))
+                    exit(1)
+
+
         else:
             print("{} Minecraft launch check could not be made. ".format(self.tag))
             secs = int(input("{} Starting the program.. Please say how much secs of countdown you want: ".format(self.tag)))
