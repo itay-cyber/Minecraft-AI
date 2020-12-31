@@ -15,6 +15,8 @@ Steps:
 6. Follow the start process
 7. Now your bot is set up. Go into "start.py" and change up the code for the AI to move, jump, or soon-to-be mine.
 
+PS: You have to be in-game while the bot is running in order for it to work.
+
 
 
 # Minecraft-AI Docs
@@ -74,7 +76,7 @@ Places a block at the block being looked at.
 
 We are still working on the main functionality of the AI, so come back later to check out new features!
 
-# ! WARNING ! MINECRAFT MUST BE LAUNCHED AND YOU MUST BE IN MINECRAFT FOR THE AI TO WORK PROPERlY
+# ! WARNING ! _MINECRAFT_ [MUST] BE LAUNCHED AND YOU MUST BE IN MINECRAFT FOR THE AI TO WORK PROPERlY
 
 
 DOCS WRITTEN BY @itay-cyber
