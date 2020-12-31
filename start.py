@@ -18,3 +18,5 @@ ai.movement.jump()
 ai.movement.sprint_rfw(10)
 
 ai.movement.jump()
+
+ai.misc_funcs.type_in_chat("hello, world")

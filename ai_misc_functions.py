@@ -12,10 +12,13 @@ class AIMiscFunctionsInvoker():
 
     #type param msg in the minecraft chat
     def type_in_chat(self, msg):
+
+        msg.replace(" ", "")
+        
         pk.pressKey("T")
         pk.releaseKey("T")
         time.sleep(0.1)
-        pk.sendSequence(seq=msg)
+        pk.sendSequence(msg)
         pk.pressKey("ENTER")
         pk.releaseKey("ENTER")
 

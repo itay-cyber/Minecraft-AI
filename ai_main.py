@@ -82,5 +82,3 @@ class MinecraftAI:
             print("{} Minecraft is not running right now. Terminating...".format(self.tag))
             quit(1)
             
-        
-    
